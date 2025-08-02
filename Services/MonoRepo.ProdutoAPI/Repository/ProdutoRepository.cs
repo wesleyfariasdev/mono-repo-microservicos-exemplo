@@ -79,7 +79,7 @@ internal class ProdutoRepository(ProdutoContextDb produtoDb) : IProdutoRepositor
                 NomeCategoria = p.NomeCategoria,
                 ImagemUrl = p.ImagemUrl
             })
-            .FirstOrDefaultAsync() ?? throw new ArgumentException("Não foi possível obter o produto");
+            .FirstOrDefaultAsync() ?? ProdutoVo.Empty;
 
     public async Task<List<ProdutoVo>> ObterTodosProdutos() =>
            await produtoDb.Produtos
