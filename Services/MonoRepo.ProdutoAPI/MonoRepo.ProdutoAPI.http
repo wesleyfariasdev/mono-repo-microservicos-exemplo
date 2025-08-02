@@ -1,0 +1,6 @@
+@MonoRepo.ProdutoAPI_HostAddress = http://localhost:5222
+
+GET {{MonoRepo.ProdutoAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
