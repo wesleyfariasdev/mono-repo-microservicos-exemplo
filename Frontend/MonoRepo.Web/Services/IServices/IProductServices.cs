@@ -1,9 +1,8 @@
-﻿
-using MonoRepo.Shared.Data.ValueObjects;
+﻿using MonoRepo.Shared.Data.ValueObjects;
 
-namespace MonoRepo.ProdutoAPI.Repository.IRepository;
+namespace MonoRepo.Web.Services.IServices;
 
-public interface IProdutoRepository
+public interface IProductServices
 {
     Task<ProdutoVo> ObterProdutoPorId(int id);
     Task<List<ProdutoVo>> ObterTodosProdutos();

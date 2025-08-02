@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MonoRepo.ProdutoAPI.Data.ValueObjects;
 using MonoRepo.ProdutoAPI.Repository.IRepository;
+using MonoRepo.Shared.Data.ValueObjects;
 
 namespace MonoRepo.ProdutoAPI.Controllers;
 
