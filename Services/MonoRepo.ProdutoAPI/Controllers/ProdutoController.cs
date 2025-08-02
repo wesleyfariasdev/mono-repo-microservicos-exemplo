@@ -33,8 +33,19 @@ public class ProdutoController(IProdutoRepository produtoRepository) : Controlle
     {
         if (produto == null)
             return BadRequest("Produto não pode ser nulo.");
-        var novoProduto = await produtoRepository.CriarProduto(produto);
-        return Ok(novoProduto);
+        try
+        {
+            var novoProduto = await produtoRepository.CriarProduto(produto);
+            return Ok(novoProduto);
+        }
+        catch (ArgumentException ex)
+        {
+            return BadRequest(ex.Message);
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, $"Erro interno do servidor: {ex.Message}");
+        }
     }
 
     [HttpPut("{id}")]
@@ -42,12 +53,26 @@ public class ProdutoController(IProdutoRepository produtoRepository) : Controlle
     {
         if (produto == null)
             return BadRequest("Produto não pode ser nulo.");
-        var produtoAtualizado = await produtoRepository.AtualizarProduto(id, produto);
-        if (produtoAtualizado == null)
-            return NotFound($"Produto com ID {id} não encontrado.");
-        return Ok(produtoAtualizado);
+        try
+        {
+            var produtoAtualizado = await produtoRepository.AtualizarProduto(id, produto);
+            return Ok(produtoAtualizado);
+        }
+        catch (ArgumentException ex)
+        {
+            return BadRequest(ex.Message);
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, $"Erro interno do servidor: {ex.Message}");
+        }
     }
 
+    /// <summary>
+    /// Demonstrando propagassão do erro para o controller
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeletarProduto(int id)
     {
