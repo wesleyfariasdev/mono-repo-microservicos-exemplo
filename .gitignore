@@ -362,3 +362,5 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 /.idea/.idea.MonoRepo/.idea
+/Services/MonoRepo.ProdutoAPI/appsettings.json
+/Services/MonoRepo.ProdutoAPI/appsettings.Development.json
