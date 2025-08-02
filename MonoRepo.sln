@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoRepo.ProdutoAPI", "Serv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoRepo.Web", "Frontend\MonoRepo.Web\MonoRepo.Web.csproj", "{BC68B425-DB1B-4C91-81D7-7F0A8F5B1E50}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{54E00D58-B87A-4BD6-8675-BF41487D75A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoRepo.Shared", "Shared\MonoRepo.Shared\MonoRepo.Shared.csproj", "{5ED677DA-A698-4873-8EE7-6504FB87F7CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,10 @@ Global
 		{BC68B425-DB1B-4C91-81D7-7F0A8F5B1E50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC68B425-DB1B-4C91-81D7-7F0A8F5B1E50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC68B425-DB1B-4C91-81D7-7F0A8F5B1E50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5ED677DA-A698-4873-8EE7-6504FB87F7CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ED677DA-A698-4873-8EE7-6504FB87F7CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ED677DA-A698-4873-8EE7-6504FB87F7CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ED677DA-A698-4873-8EE7-6504FB87F7CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{97AC4D84-3C6A-4E32-B9A1-0150A2351493} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{BC68B425-DB1B-4C91-81D7-7F0A8F5B1E50} = {004F3C1C-5383-4D00-B402-473BD64EEE16}
+		{5ED677DA-A698-4873-8EE7-6504FB87F7CD} = {54E00D58-B87A-4BD6-8675-BF41487D75A1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D9B02F3E-B69E-4598-9A45-99F0767A3876}
