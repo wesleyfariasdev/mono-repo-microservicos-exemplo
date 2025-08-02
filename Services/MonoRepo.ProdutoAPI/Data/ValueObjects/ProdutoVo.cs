@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
-
-namespace MonoRepo.ProdutoAPI.Data.ValueObjects;
+﻿namespace MonoRepo.ProdutoAPI.Data.ValueObjects;
 
 public class ProdutoVo
 {
