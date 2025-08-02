@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MonoRepo.ProdutoAPI.Context;
-using MonoRepo.ProdutoAPI.Data.ValueObjects;
 using MonoRepo.ProdutoAPI.Models;
 using MonoRepo.ProdutoAPI.Repository.IRepository;
+using MonoRepo.Shared.Data.ValueObjects;
 
 namespace MonoRepo.ProdutoAPI.Repository;
 

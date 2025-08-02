@@ -1,4 +1,5 @@
-﻿using MonoRepo.ProdutoAPI.Data.ValueObjects;
+﻿
+using MonoRepo.Shared.Data.ValueObjects;
 
 namespace MonoRepo.ProdutoAPI.Repository.IRepository;
 
