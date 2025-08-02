@@ -364,3 +364,4 @@ FodyWeavers.xsd
 /.idea/.idea.MonoRepo/.idea
 /Services/MonoRepo.ProdutoAPI/appsettings.json
 /Services/MonoRepo.ProdutoAPI/appsettings.Development.json
+/Services/MonoRepo.ProdutoAPI/Migrations
