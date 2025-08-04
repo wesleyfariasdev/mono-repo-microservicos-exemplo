@@ -1,11 +1,15 @@
 using Microsoft.EntityFrameworkCore;
 using MonoRepo.ProdutoAPI.Context;
+using MonoRepo.ProdutoAPI.Repository;
+using MonoRepo.ProdutoAPI.Repository.IRepository;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Add services to the container
 var connection = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ProdutoContextDb>(options => options.UseSqlServer(connection));
+
+builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

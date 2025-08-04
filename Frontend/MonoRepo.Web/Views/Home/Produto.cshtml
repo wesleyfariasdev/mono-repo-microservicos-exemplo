@@ -1,0 +1,25 @@
+﻿@using MonoRepo.Shared.Data.ValueObjects
+@model IEnumerable<ProdutoVo>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row p-4 m-5">
+        @foreach (var produto in Model)
+        {
+            <div class="card mt-2">
+                <ul>
+                    <li>@produto.NomeProduto</li>
+                    <li>@produto.Descricao</li>
+                    <li>@produto.Preco</li>
+                    <li>@produto.NomeCategoria</li>
+                    <li>
+                        <a href="">Detalhes</a>
+                    </li>
+                </ul>
+            </div>
+        }
+    </div>
+</div>
