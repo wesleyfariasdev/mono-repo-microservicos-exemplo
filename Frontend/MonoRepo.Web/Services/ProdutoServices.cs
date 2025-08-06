@@ -6,9 +6,9 @@ namespace MonoRepo.Web.Services;
 public class ProdutoServices(HttpClient client) : IProductServices
 {
     public const string ProdutoApiPath = "api/produto";
-    public async Task<ProdutoVo> AtualizarProduto(int id, ProdutoVo produto)
+    public async Task<ProdutoVo> AtualizarProduto(ProdutoVo produto)
     {
-        var produtoRequest = await client.PutAsJsonAsync($"{ProdutoApiPath}/{id}", produto);
+        var produtoRequest = await client.PutAsJsonAsync($"{ProdutoApiPath}/{produto.Id}", produto);
         if (produtoRequest.IsSuccessStatusCode)
             return await produtoRequest.Content.ReadFromJsonAsync<ProdutoVo>();
         throw new Exception("Não foi possível atualizar o produto");

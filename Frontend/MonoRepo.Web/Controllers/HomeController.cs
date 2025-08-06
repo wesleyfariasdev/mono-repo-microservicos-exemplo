@@ -36,6 +36,25 @@ namespace MonoRepo.Web.Controllers
         }
 
         [HttpGet]
+        public async Task<IActionResult> AtualizarProduto(int id)
+        {
+            var produto = await _produtoServices.ObterProdutoPorId(id);
+            return View(produto);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AtualizarProduto(ProdutoVo produtoVo)
+        {
+            if (ModelState.IsValid)
+            {
+                var produto = await _produtoServices.AtualizarProduto(produtoVo);
+                if (produto != null)
+                    return RedirectToAction(nameof(ProdutoDetalhe), new { id = produto.Id });
+            }
+            return View(produtoVo);
+        }
+
+        [HttpGet]
         public async Task<IActionResult> CriarProduto()
         {
             return View();
