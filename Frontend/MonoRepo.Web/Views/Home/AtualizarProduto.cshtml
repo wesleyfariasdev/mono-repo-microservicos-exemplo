@@ -1,0 +1,36 @@
+﻿@using MonoRepo.Shared.Data.ValueObjects
+@model ProdutoVo
+
+@{
+    ViewData["Title"] = "Atualiar Produto";
+}
+
+<form asp-action="AtualizarProduto">
+    <p>Atualizar Produto</p>
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="Id" />
+    <ul>
+        <li>
+            <input asp-for="NomeProduto" placeholder="Nome do produto" />
+            <span asp-validation-for="NomeProduto" class="text-danger"></span>
+        </li>
+        <li>
+            <input asp-for="Descricao" placeholder="Descrição do produto" />
+            <span asp-validation-for="Descricao" class="text-danger"></span>
+        </li>
+        <li>
+            <input type="number" asp-for="Preco" placeholder="Preço" />
+            <span asp-validation-for="Preco" class="text-danger"></span>
+        </li>
+        <li>
+            <input asp-for="NomeCategoria" placeholder="Nome da Categoria" />
+            <span asp-validation-for="NomeCategoria" class="text-danger"></span>
+        </li>
+        <li>
+            <input asp-for="ImagemUrl" placeholder="Url da Imagem" />
+            <span asp-validation-for="ImagemUrl" class="text-danger"></span>
+        </li>
+    </ul>
+    <button type="submit">Atualizar Produto</button>
+    <a type="button" asp-controller="Home" asp-action="Produto">Cancelar</a>
+</form>
