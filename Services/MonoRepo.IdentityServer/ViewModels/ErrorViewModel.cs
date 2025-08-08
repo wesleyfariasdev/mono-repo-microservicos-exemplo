@@ -1,4 +1,4 @@
-namespace MonoRepo.IdentityServer.Models
+namespace MonoRepo.IdentityServer.ViewModels
 {
     public class ErrorViewModel
     {
